@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(content, pageTitle, pageSubtitle)">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title th:text="${pageTitle} ?: 'Test Generator'">Test Generator</title>
+
+  <!-- Tabler CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+
+<body>
+<div class="page" th:fragment="layout(content)" >
+  <!-- Sidebar -->
+  <aside class="navbar navbar-vertical navbar-expand-lg">
+    <div class="container-fluid">
+      <h1 class="navbar-brand navbar-brand-autodark">
+        <a th:href="@{/dashboard}" >
+          <i class="ti ti-file-text me-1"></i> Test Generator
+        </a>
+      </h1>
+
+      <div class="collapse navbar-collapse show">
+        <ul class="navbar-nav pt-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/dashboard}">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-home"></i></span>
+              <span class="nav-link-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/tests}">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-list-details"></i></span>
+              <span class="nav-link-title">Tests</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/tests/import}">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-upload"></i></span>
+              <span class="nav-link-title">Import Test</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/generate}">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-file-type-pdf"></i></span>
+              <span class="nav-link-title">Generate PDF</span>
+            </a>
+          </li>
+          <li class="nav-item mt-3">
+            <form th:action="@{/logout}" method="post" class="px-3">
+              <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+              <button class="btn btn-outline-danger w-100" type="submit">
+                <i class="ti ti-logout me-1"></i> Logout
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <div class="page-wrapper">
+    <div class="page-header d-print-none">
+      <div class="container-xl">
+        <div class="row g-2 align-items-center">
+          <div class="col">
+            <h2 class="page-title" th:text="${pageTitle} ?: 'Dashboard'">Dashboard</h2>
+            <div class="text-secondary" th:text="${pageSubtitle} ?: ''"></div>
+          </div>
+          <div class="col-auto ms-auto d-print-none">
+            <div class="btn-list">
+              <a th:href="@{/tests/import}" class="btn btn-outline-primary">
+                <i class="ti ti-upload me-1"></i> Import
+              </a>
+              <a th:href="@{/generate}" class="btn btn-primary">
+                <i class="ti ti-file-type-pdf me-1"></i> Generate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <div class="container-xl">
+
+        <!-- Toast/alerts -->
+        <div th:if="${toastSuccess}" class="alert alert-success" role="alert" th:text="${toastSuccess}"></div>
+        <div th:if="${toastError}" class="alert alert-danger" role="alert" th:text="${toastError}"></div>
+
+        <div th:replace="${content}"></div>
+
+
+      </div>
+    </div>
+
+    <footer class="footer footer-transparent d-print-none">
+      <div class="container-xl">
+        <div class="text-center text-secondary">
+          © <span th:text="${#dates.format(#dates.createNow(), 'yyyy')}"></span> Test Generator
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+</body>
+</html>

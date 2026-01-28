@@ -1,0 +1,49 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:replace="~{layout :: layout(content=~{::section}, pageTitle='Tests', pageSubtitle='Import qilingan testlar ro‘yxati')}">
+  <section>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Tests</h3>
+        <div class="card-actions">
+          <a class="btn btn-primary" th:href="@{/tests/import}">
+            <i class="ti ti-upload me-1"></i> Import Test
+          </a>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+          <thead>
+          <tr>
+            <th style="width: 80px;">ID</th>
+            <th>Nomi</th>
+            <th style="width: 140px;">Savollar</th>
+            <th style="width: 160px;">Yaratilgan</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr th:each="t : ${tests}">
+            <td th:text="${t.id}">1</td>
+            <td th:text="${t.title}">Java Basics</td>
+            <td th:text="${t.questionCount}">30</td>
+            <td th:text="${t.createdAt}">2026-01-28</td>
+          </tr>
+
+          <tr th:if="${#lists.isEmpty(tests)}">
+            <td colspan="4" class="text-secondary">Hali test yo‘q. Import qiling.</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+</body>
+</html>

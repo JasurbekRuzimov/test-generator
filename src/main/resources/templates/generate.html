@@ -1,0 +1,81 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:replace="~{layout :: layout(content=~{::section}, pageTitle='Generate PDF', pageSubtitle='Random variantlar yaratish')}">
+  <section>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Generate PDF</h3>
+      </div>
+
+      <div class="card-body">
+        <form th:action="@{/generate}" method="post">
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Test tanlang</label>
+              <select class="form-select" name="testId" required>
+                <option th:each="t : ${tests}" th:value="${t.id}" th:text="${t.title}">Java Basics</option>
+              </select>
+              <div class="form-hint" th:if="${#lists.isEmpty(tests)}">
+                Avval test import qiling: <a th:href="@{/tests/import}">Import Test</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Savollar soni</label>
+              <input type="number" class="form-control" name="questionCount" value="30" min="1" required>
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Variantlar soni</label>
+              <input type="number" class="form-control" name="variantCount" value="5" min="1" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Seed (ixtiyoriy)</label>
+              <input type="text" class="form-control" name="seed" placeholder="Masalan: 20260128">
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Template</label>
+              <select class="form-select" name="template">
+                <option value="CLASSIC">Classic</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-check">
+                <input class="form-check-input" type="checkbox" name="shuffleQuestions" checked>
+                <span class="form-check-label">Savollarni aralashtirish</span>
+              </label>
+
+              <label class="form-check">
+                <input class="form-check-input" type="checkbox" name="shuffleOptions" checked>
+                <span class="form-check-label">Javob variantlarini aralashtirish</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <button class="btn btn-primary" type="submit" th:disabled="${#lists.isEmpty(tests)}">
+              <i class="ti ti-file-type-pdf me-1"></i> Generate
+            </button>
+          </div>
+
+          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        </form>
+
+        <div class="alert alert-info mt-3">
+          Generate qilingandan so‘ng: har bir variant uchun PDF download tugmalari chiqadi.
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+</body>
+</html>

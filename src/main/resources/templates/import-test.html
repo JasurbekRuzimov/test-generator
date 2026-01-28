@@ -1,0 +1,90 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:replace="~{layout :: layout(content=~{::section}, pageTitle='Import Test', pageSubtitle='TXT/DOCX fayl yuklash')}">
+  <section>
+
+    <div class="row row-deck row-cards">
+      <!-- Upload card -->
+      <div class="col-lg-7">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Import Test (TXT/DOCX)</h3>
+          </div>
+          <div class="card-body">
+            <form th:action="@{/tests/import}" method="post" enctype="multipart/form-data">
+
+              <div class="mb-3">
+                <label class="form-label">Fayl tanlang</label>
+                <input type="file" class="form-control" name="file" accept=".txt,.docx" required>
+                <div class="form-hint">Tavsiya: TXT (UTF-8). DOCX ham ishlaydi.</div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Test nomi</label>
+                <input type="text" class="form-control" name="title" placeholder="Masalan: Java Basics" required>
+              </div>
+
+              <div class="btn-list">
+                <button class="btn btn-primary" type="submit">
+                  <i class="ti ti-upload me-1"></i> Import & Save
+                </button>
+                <a class="btn btn-outline-secondary" th:href="@{/tests}">
+                  <i class="ti ti-list-details me-1"></i> Tests ro‘yxati
+                </a>
+              </div>
+
+              <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            </form>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <div class="alert alert-info mt-3">
+          <b>Eslatma:</b> `---` savollarni ajratadi. `ANS: A/B/C/D`.
+        </div>
+      </div>
+
+      <!-- Template card -->
+      <div class="col-lg-5">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">TXT format shablon</h3>
+          </div>
+          <div class="card-body">
+            <pre class="mb-0">
+Q: Savol matni?
+A) Variant A
+B) Variant B
+C) Variant C
+D) Variant D
+ANS: B
+---
+Q: Keyingi savol?
+A) ...
+B) ...
+C) ...
+D) ...
+ANS: A
+---
+            </pre>
+          </div>
+        </div>
+
+        <div class="card mt-3">
+          <div class="card-header">
+            <h3 class="card-title">Misol fayl</h3>
+          </div>
+          <div class="card-body text-secondary">
+            Loyihada <code>samples/sample-questions.txt</code> bo‘lsa — shuni olib sinab ko‘ring.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+</body>
+</html>

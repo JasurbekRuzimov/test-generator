@@ -1,0 +1,96 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:replace="~{layout :: layout(content=~{::section}, pageTitle='Dashboard', pageSubtitle='Test Generator admin panel')}">
+  <section>
+
+
+  <div class="row row-deck row-cards">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card card-sm">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <span class="bg-primary text-white avatar"><i class="ti ti-list-details"></i></span>
+              </div>
+              <div class="col">
+                <div class="font-weight-medium" th:text="${stats.tests} + ' tests'">0 tests</div>
+                <div class="text-secondary">Import qilingan testlar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <div class="card card-sm">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <span class="bg-green text-white avatar"><i class="ti ti-file-type-pdf"></i></span>
+              </div>
+              <div class="col">
+                <div class="font-weight-medium" th:text="${stats.generations} + ' generations'">0 generations</div>
+                <div class="text-secondary">PDF generatsiyalar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Oxirgi generatsiyalar</h3>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-vcenter card-table">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Test</th>
+                <th>Variant</th>
+                <th>Status</th>
+                <th>Time</th>
+                <th class="w-1"></th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr th:each="g : ${recentGenerations}">
+                <td th:text="${g.id}">1</td>
+                <td th:text="${g.testTitle}">Java Basics</td>
+                <td th:text="${g.variants}">10</td>
+                <td>
+                  <span class="badge" th:text="${g.status}"
+                        th:classappend="${g.status=='DONE'} ? ' bg-green' : ' bg-yellow'">DONE</span>
+                </td>
+                <td th:text="${g.createdAt}">2026-01-27</td>
+                <td>
+                  <a class="btn btn-sm btn-outline-primary"
+                     th:href="@{/generations/{id}(id=${g.id})}">
+                    Ko‘rish
+                  </a>
+                </td>
+              </tr>
+
+              <tr th:if="${#lists.isEmpty(recentGenerations)}">
+                <td colspan="6" class="text-secondary">Hali generatsiya yo‘q.</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>

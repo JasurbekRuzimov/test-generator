@@ -1,0 +1,106 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:replace="~{layout :: layout(content=~{::section}, pageTitle=${pageTitle}, pageSubtitle=${pageSubtitle})}">
+  <section>
+
+    <div class="row row-deck row-cards">
+
+      <!-- Summary -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title" th:text="${pageTitle}">Generation</h3>
+            <div class="card-actions">
+              <a class="btn btn-outline-secondary" th:href="@{/generate}">
+                <i class="ti ti-refresh me-1"></i> Yana generatsiya
+              </a>
+              <!-- ZIP (agar endpointingiz bo'lsa) -->
+<!--              <a class="btn btn-primary" th:if="${gen.zipReady}" th:href="@{/generations/{id}/download-zip(id=${gen.id})}">-->
+<!--                <i class="ti ti-download me-1"></i> Download ZIP-->
+<!--              </a>-->
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="row g-2">
+              <div class="col-md-3">
+                <div class="text-secondary">Status</div>
+                <span class="badge"
+                      th:text="${gen.status}"
+                      th:classappend="${gen.status=='DONE'} ? ' bg-green' : ' bg-yellow'">DONE</span>
+              </div>
+
+              <div class="col-md-3">
+                <div class="text-secondary">Seed</div>
+                <div class="fw-bold" th:text="${gen.seed}">-</div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="text-secondary">Savollar</div>
+                <div class="fw-bold" th:text="${gen.questionCount}">0</div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="text-secondary">Variantlar</div>
+                <div class="fw-bold" th:text="${gen.variantCount}">0</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Variants table -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Variantlar</h3>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-vcenter card-table">
+              <thead>
+              <tr>
+                <th style="width: 120px;">Variant</th>
+                <th style="width: 140px;">PDF</th>
+                <th>Answer Key</th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr th:each="v : ${variants}">
+                <td>
+                  <span class="badge bg-azure" th:text="'Variant ' + ${v.no}">Variant 1</span>
+                </td>
+
+                <td>
+                  <a class="btn btn-sm btn-outline-primary"
+                     th:href="@{/generations/{genId}/download/{variantNo}(genId=${gen.id}, variantNo=${v.no})}">
+                    <i class="ti ti-file-type-pdf me-1"></i> PDF
+                  </a>
+                </td>
+
+                <td>
+                  <code th:text="${v.answerKey}">1-A, 2-B, 3-C</code>
+                </td>
+              </tr>
+
+              <tr th:if="${#lists.isEmpty(variants)}">
+                <td colspan="3" class="text-secondary">Variant topilmadi.</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Error</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body class="border-top-wide border-primary d-flex flex-column">
+<div class="page page-center">
+  <div class="container container-tight py-4">
+    <div class="text-center mb-4">
+      <a th:href="@{/dashboard}" class="navbar-brand navbar-brand-autodark">
+        <i class="ti ti-alert-triangle me-1"></i> Test Generator
+      </a>
+    </div>
+
+    <div class="card card-md">
+      <div class="card-body text-center">
+        <h2 class="card-title">Xatolik yuz berdi</h2>
+        <p class="text-secondary" th:text="${message} ?: 'Noma\'lum xatolik.'"></p>
+        <div class="mt-3">
+          <a th:href="@{/dashboard}" class="btn btn-primary">Dashboard</a>
+          <a th:href="@{/tests/import}" class="btn btn-outline-primary">Import</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

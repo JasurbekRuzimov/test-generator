@@ -1,0 +1,21 @@
+Q: Java’da massiv indekslari qayerdan boshlanadi?
+A) 1
+B) 0
+C) -1
+D) 2
+ANS: B
+---
+Q: System.out.println(5 + 2 * 3); natija nima?
+A) 21
+B) 11
+C) 17
+D) Error
+ANS: B
+---
+Q: Java’da String immutable degani nima?
+A) O'zgartirish mumkin
+B) O'zgarmaydi, yangi obyekt yaratiladi
+C) Faqat null bo'ladi
+D) Faqat char[] bo'ladi
+ANS: B
+---
