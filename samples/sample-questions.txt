@@ -1,4 +1,4 @@
-Q: Java’da massiv indekslari qayerdan boshlanadi?
+ Q: Java’da massiv indekslari qayerdan boshlanadi?
 A) 1
 B) 0
 C) -1

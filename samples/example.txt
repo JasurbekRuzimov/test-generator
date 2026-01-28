@@ -1,0 +1,211 @@
+Q: Java’da massiv indekslari qayerdan boshlanadi?
+A) 1
+B) 0
+C) -1
+D) 2
+ANS: B
+---
+Q: System.out.println(5 + 2 * 3); natija nima?
+A) 21
+B) 11
+C) 17
+D) Error
+ANS: B
+---
+Q: Java’da String qaysi turga kiradi?
+A) Primitive
+B) Reference (Object)
+C) Pointer
+D) Struct
+ANS: B
+---
+Q: Quyidagi kod natijasi nima?
+Q: int x = 10; System.out.println(x++);
+A) 10
+B) 11
+C) 9
+D) Error
+ANS: A
+---
+Q: Java’da `==` operatori String’larda nimani solishtiradi?
+A) Matn qiymatini
+B) Hash qiymatini
+C) Referenceni (xotira manzilini)
+D) Uzunligini
+ANS: C
+---
+Q: Java’da metod overloading sharti qaysi?
+A) Return type o‘zgarishi
+B) Parametrlar soni yoki turlari farq qilishi
+C) Method nomi o‘zgarishi
+D) Class nomi o‘zgarishi
+ANS: B
+---
+Q: Java’da metod overriding sharti qaysi?
+A) Bir class ichida 2 ta bir xil metod yozish
+B) Meros olish (inheritance) bo‘lishi va metodni qayta yozish
+C) Parametrlarni o‘zgartirmasdan nomni o‘zgartirish
+D) Static metodni qayta yozish
+ANS: B
+---
+Q: Quyidagi qaysi biri `for` sikliga to‘g‘ri misol?
+A) for (int i=0; i<10; i++) {}
+B) for (i=0; i<10; i--) {}
+C) for int i=0 to 10 {}
+D) for (int i: 10) {}
+ANS: A
+---
+Q: `break` operatori nima qiladi?
+A) Siklni qayta boshlaydi
+B) Siklni to‘xtatadi
+C) Kodni tezlashtiradi
+D) Xatoni yashiradi
+ANS: B
+---
+Q: `continue` operatori nima qiladi?
+A) Siklni to‘liq to‘xtatadi
+B) Joriy iteratsiyani tashlab, keyingisiga o‘tadi
+C) Dasturdan chiqib ketadi
+D) O‘zgaruvchini o‘chiradi
+ANS: B
+---
+Q: Java’da `ArrayList` qaysi package’da?
+A) java.io
+B) java.util
+C) java.sql
+D) java.net
+ANS: B
+---
+Q: `ArrayList`ning o‘lchamini olish uchun qaysi metod ishlatiladi?
+A) length()
+B) size()
+C) count()
+D) getSize()
+ANS: B
+---
+Q: `int[] a = new int[5];` nimani bildiradi?
+A) 5 ta ArrayList yaratildi
+B) 5 ta char massiv
+C) Xato
+D) 5 ta elementli int massiv yaratildi
+ANS: D
+---
+Q: Java’da `null` nimani anglatadi?
+A) 0 qiymat
+B) Bo‘sh string
+C) Hech qanday obyektga ishora qilmaydi
+D) false qiymat
+ANS: C
+---
+Q: Java’da `final` keyword nimani bildiradi?
+A) O‘zgaruvchi qiymati o‘zgarishi mumkin
+B) O‘zgaruvchi qiymati o‘zgarmaydi
+C) Class faqat interface bo‘ladi
+D) Metod faqat private bo‘ladi
+ANS: B
+---
+Q: Quyidagilardan qaysi biri access modifier emas?
+A) public
+B) private
+C) protected
+D) package
+ANS: D
+---
+Q: Java’da constructor nima?
+A) Class ichidagi oddiy metod
+B) Obyekt yaratilganda chaqiriladigan maxsus metod
+C) Faqat static metod
+D) Interface ichidagi metod
+ANS: B
+---
+Q: `this` kalit so‘zi nimaga ishlatiladi?
+A) Faqat static metodda
+B) Joriy obyektga murojaat qilish uchun
+C) Faqat parent classga murojaat qilish uchun
+D) Paket nomini ko‘rsatish uchun
+ANS: B
+---
+Q: Java’da meros olish uchun qaysi keyword ishlatiladi?
+A) implements
+B) extends
+C) import
+D) inherit
+ANS: B
+---
+Q: Interface’ni class’da ishlatish uchun qaysi keyword?
+A) extends
+B) implements
+C) using
+D) override
+ANS: B
+---
+Q: `try-catch` nima uchun kerak?
+A) Kodni tezlashtirish uchun
+B) Xatolarni ushlab, boshqarish uchun
+C) Loop yaratish uchun
+D) Massiv yaratish uchun
+ANS: B
+---
+Q: Java’da `HashMap` nima?
+A) Ketma-ket ro‘yxat
+B) Kalit-qiymat (key-value) saqlovchi tuzilma
+C) Matn tipi
+D) Fayl o‘quvchi klass
+ANS: B
+---
+Q: OOPning 4 asosiy prinsipi qaysilar?
+A) Loop, if, else, switch
+B) Encapsulation, Inheritance, Polymorphism, Abstraction
+C) Compile, Run, Debug, Test
+D) Class, Object, Method, Variable
+ANS: B
+---
+Q: Encapsulation nima?
+A) Kodni ko‘paytirish
+B) Ma’lumotlarni yashirish va metodlar orqali boshqarish
+C) Bir nechta class yaratish
+D) Faqat inheritance ishlatish
+ANS: B
+---
+Q: Polymorphism nima?
+A) Bitta metod faqat bitta ish qiladi
+B) Bir xil nomli metod turlicha ishlashi
+C) Faqat private metodlar
+D) Faqat static o‘zgaruvchilar
+ANS: B
+---
+Q: Abstraction nima?
+A) Keraksiz tafsilotlarni yashirib, muhimini ko‘rsatish
+B) Hammasini oshkor qilish
+C) O‘zgaruvchini o‘chirish
+D) Faylni yopish
+ANS: A
+---
+Q: Inheritance nima?
+A) Classlar orasida aloqa yo‘q
+B) Bir class boshqa classdan xususiyat va metodlarni olishi
+C) Faqat list ishlatish
+D) Faqat if ishlatish
+ANS: B
+---
+Q: Java’da `static` keyword nimani bildiradi?
+A) Obyektga tegishli
+B) Classga tegishli (umumiy)
+C) Faqat constructor
+D) Faqat interface
+ANS: B
+---
+Q: `Math.random()` odatda qaysi oraliqda qiymat qaytaradi?
+A) 0 dan 10 gacha (butun)
+B) 1 dan 100 gacha (butun)
+C) 0.0 dan 1.0 gacha (double)
+D) -1.0 dan 1.0 gacha
+ANS: C
+---
+Q: Java’da `String` immutable degani nima?
+A) String o‘zgartirish mumkin
+B) String qiymati yaratilgandan keyin o‘zgarmaydi (yangi obyekt yaratiladi)
+C) String faqat null bo‘ladi
+D) String faqat char[] bo‘ladi
+ANS: B
+---
