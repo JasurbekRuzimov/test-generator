@@ -153,7 +153,7 @@ public class AdminPageController {
             try {
                 parsedSeed = Long.parseLong(seed.trim());
             } catch (NumberFormatException ignored) {
-                // keep null
+
             }
         }
 

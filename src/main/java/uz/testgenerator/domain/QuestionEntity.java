@@ -19,7 +19,6 @@ public class QuestionEntity {
     @Column(nullable = false, columnDefinition = "text")
     private String text;
 
-    /** 0..3 (A..D) in ORIGINAL order as imported */
     @Column(nullable = false)
     private int correctIndex;
 

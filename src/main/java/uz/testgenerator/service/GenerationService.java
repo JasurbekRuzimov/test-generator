@@ -111,7 +111,7 @@ public class GenerationService {
                 "Variant topilmadi: genId=" + genId + ", variantNo=" + variantNo
             ));
 
-        String pdfPath = v.getPdfPath();   // sizda aynan shu saqlangan
+        String pdfPath = v.getPdfPath();
         if (pdfPath == null || pdfPath.isBlank()) {
             throw new ResponseStatusException(
                 HttpStatus.INTERNAL_SERVER_ERROR,

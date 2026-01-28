@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title th:text="${pageTitle} ?: 'Test Generator'">Test Generator</title>
 
-  <!-- Tabler CSS -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
@@ -87,7 +87,6 @@
     <div class="page-body">
       <div class="container-xl">
 
-        <!-- Toast/alerts -->
         <div th:if="${toastSuccess}" class="alert alert-success" role="alert" th:text="${toastSuccess}"></div>
         <div th:if="${toastError}" class="alert alert-danger" role="alert" th:text="${toastError}"></div>
 

@@ -19,7 +19,7 @@ public class TestFileParser {
         if (name.endsWith(".docx")) {
             return parseDocx(file);
         }
-        return parseTxt(file); // default
+        return parseTxt(file);
     }
 
     public ParsedTest parseTxt(MultipartFile file) throws IOException {
@@ -44,7 +44,7 @@ public class TestFileParser {
     }
 
     private ParsedTest parseLines(List<String> rawLines) {
-        // Normalize: keep order, trim right
+
         List<String> lines = rawLines.stream()
             .map(l -> l == null ? "" : l.stripTrailing())
             .toList();

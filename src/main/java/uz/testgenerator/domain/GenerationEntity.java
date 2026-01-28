@@ -34,7 +34,7 @@ public class GenerationEntity {
     private Instant createdAt = Instant.now();
 
     @Column(nullable = false)
-    private String status = "DONE"; // MVP: synchronous
+    private String status = "DONE";
 
     public GenerationEntity() {}
 

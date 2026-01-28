@@ -31,7 +31,7 @@ public class PdfRenderService {
             document.add(title);
 
             document.add(new Paragraph("Variant: " + variantNo, hFont));
-            document.add(new Paragraph("Ism: ____________________   Guruh: ____________   Sana: ____/____/______", normal));
+            document.add(new Paragraph("Ism: ___________________________    Guruh: ____________      Sana: ____/____/______", normal));
             document.add(Chunk.NEWLINE);
 
             StringBuilder answerKey = new StringBuilder();
@@ -42,7 +42,7 @@ public class PdfRenderService {
                 document.add(new Paragraph((i + 1) + ". " + q.getText(), normal));
                 List<OptionEntity> opts = new ArrayList<>(q.getOptions());
                 if (shuffleOptions) {
-                    // Fisher-Yates shuffle
+
                     for (int j = opts.size() - 1; j > 0; j--) {
                         int k = random.nextInt(j + 1);
                         OptionEntity tmp = opts.get(j);

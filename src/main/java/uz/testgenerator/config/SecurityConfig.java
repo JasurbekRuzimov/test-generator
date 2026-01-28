@@ -25,7 +25,7 @@ public class SecurityConfig {
                 ).permitAll()
                 .anyRequest().authenticated()
             )
-            // H2 console needs frames; for MVP only.
+
             .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()))
             .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"))
             .formLogin(form -> form
