@@ -1,0 +1,491 @@
+Q: Javada dastur ishga tushadigan asosiy metod qaysi?
+A) start()
+B) run()
+C) main(String[] args)
+D) init()
+ANS: C
+---
+Q: `System.out.print("A"); System.out.print("B");` natijasi qanday chiqadi?
+A) A va keyingi qatorda B
+B) AB (bitta qatorda)
+C) BA
+D) Error
+ANS: B
+---
+Q: Javada bir qatorli comment qaysi belgi bilan yoziladi?
+A) `<!-- -->`
+B) `#`
+C) `//`
+D) `**`
+ANS: C
+---
+Q: Java’da ko‘p qatorli comment qaysi ko‘rinishda yoziladi?
+A) `/* ... */`
+B) `// ... //`
+C) `# ... #`
+D) `""" ... """`
+ANS: A
+---
+Q: Quyidagilardan qaysi biri o‘zgaruvchi nomi bo‘la olmaydi?
+A) myName
+B) _count
+C) 2value
+D) value2
+ANS: C
+---
+Q: `int a = 7 / 2; System.out.println(a);` natija nima?
+A) 3
+B) 3.5
+C) 4
+D) Error
+ANS: A
+---
+Q: Javada `3.14` soni default qaysi tipga kiradi?
+A) float
+B) double
+C) int
+D) long
+ANS: B
+---
+Q: `double x = 9;` bu holatda nima sodir bo‘ladi?
+A) Xato (error)
+B) Avtomatik (implicit) cast bo‘ladi
+C) Faqat explicit cast bilan bo‘ladi
+D) x `null` bo‘ladi
+ANS: B
+---
+Q: `double d = 5.9; int x = (int) d; System.out.println(x);` natija nima?
+A) 6
+B) 5
+C) 5.9
+D) Error
+ANS: B
+---
+Q: Javada `char` qanday yoziladi?
+A) "A"
+B) 'A'
+C) A
+D) "AB"
+ANS: B
+---
+Q: Quyidagilardan qaysi biri primitive type?
+A) String
+B) Integer
+C) int
+D) ArrayList
+ANS: C
+---
+Q: `boolean b = (5 > 3); System.out.println(b);` natija nima?
+A) true
+B) false
+C) 1
+D) Error
+ANS: A
+---
+Q: `System.out.println(10 % 3);` natija nima?
+A) 3
+B) 1
+C) 0
+D) 10
+ANS: B
+---
+Q: `System.out.println(2 + 3 * 4);` natija nima?
+A) 20
+B) 14
+C) 24
+D) 9
+ANS: B
+---
+Q: `String s = "Hello"; System.out.println(s.length());` natija nima?
+A) 4
+B) 5
+C) 6
+D) Error
+ANS: B
+---
+Q: `System.out.println("Java" + 1 + 2);` natija nima?
+A) Java3
+B) Java12
+C) 3Java
+D) Error
+ANS: B
+---
+Q: `System.out.println(1 + 2 + "Java");` natija nima?
+A) Java3
+B) 3Java
+C) 12Java
+D) Error
+ANS: B
+---
+Q: String qiymatini (matnni) solishtirish uchun qaysi metod to‘g‘ri?
+A) ==
+B) equals()
+C) compareTo() (faqat sonlar uchun)
+D) match()
+ANS: B
+---
+Q: `String s = "abc"; s.toUpperCase(); System.out.println(s);` natija nima?
+A) ABC
+B) abc
+C) null
+D) Error
+ANS: B
+---
+Q: `Math.sqrt(25)` nima qaytaradi?
+A) 5
+B) 5.0
+C) 25
+D) Error
+ANS: B
+---
+Q: `Math.abs(-12)` natijasi?
+A) -12
+B) 12
+C) 0
+D) Error
+ANS: B
+---
+Q: `if` sharti ichida nima bo‘lishi shart?
+A) int
+B) String
+C) boolean (true/false)
+D) char
+ANS: C
+---
+Q: Quyidagi kod natijasi nima?   int x = 5; if (x > 10) System.out.print("A"); else System.out.print("B");
+A) A
+B) B
+C) AB
+D) Hech narsa chiqmaydi
+ANS: B
+---
+Q: `switch` qaysi tip bilan ishlashi mumkin?
+A) double
+B) String
+C) boolean
+D) float
+ANS: B
+---
+Q: Quyidagi switch natijasi nima?   int x=2; switch(x){case 1:System.out.print("A"); case 2:System.out.print("B"); default:System.out.print("C");}
+A) A
+B) B
+C) BC
+D) ABC
+ANS: C
+---
+Q: `while` sikli qachon ishlaydi?
+A) Shart true bo‘lsa (har tekshiruvda)
+B) Faqat bir marta
+C) Shart false bo‘lsa
+D) Faqat `break` bo‘lsa
+ANS: A
+---
+Q: Quyidagi kod chiqishi nima? int i=0; while(i<3){ System.out.print(i); i++; }
+A) 123
+B) 012
+C) 0123
+D) 001122
+ANS: B
+---
+Q: `for (int i=0; i<5; i++)` sikli nechta marta aylanadi?
+A) 4
+B) 5
+C) 6
+D) Cheksiz
+ANS: B
+---
+Q: Quyidagi kod chiqishi nima?  for(int i=1;i<=5;i++){ if(i==3) continue; System.out.print(i); }
+A) 12345
+B) 1245
+C) 12
+D) 345
+ANS: B
+---
+Q: `break` siklda nima qiladi?
+A) Keyingi iteratsiyaga o‘tkazadi
+B) Siklni to‘liq to‘xtatadi
+C) Shartni o‘zgartiradi
+D) O‘zgaruvchini o‘chiradi
+ANS: B
+---
+Q: `continue` siklda nima qiladi?
+A) Siklni to‘xtatadi
+B) Joriy iteratsiyani tashlab, keyingisiga o‘tadi
+C) Dasturdan chiqib ketadi
+D) Xatoni tuzatadi
+ANS: B
+---
+Q: `int[] a = {10, 20, 30}; System.out.println(a.length);` natija nima?
+A) 2
+B) 3
+C) 30
+D) Error
+ANS: B
+---
+Q: `int[] a = new int[4];` bu nimani bildiradi?
+A) 4 ta String massiv
+B) 4 ta elementli int massiv
+C) 4 ta ArrayList
+D) Xato
+ANS: B
+---
+Q: `int[] a = {1,2,3}; System.out.println(a[0] + a[2]);` natija?
+A) 5
+B) 4
+C) 6
+D) Error
+ANS: B
+---
+Q: `int[] a = {1,2,3}; a[3] = 10;` nima bo‘ladi?
+A) 10 qo‘shiladi
+B) Array avtomatik kattalashadi
+C) ArrayIndexOutOfBoundsException
+D) NullPointerException
+ANS: C
+---
+Q: Metod (method) nima?
+A) Faqat o‘zgaruvchi
+B) Kod blokini qayta-qayta ishlatish uchun funksiya
+C) Faqat class nomi
+D) Faqat import qismi
+ANS: B
+---
+Q: `void` qaytish tipi nimani bildiradi?
+A) Metod doim int qaytaradi
+B) Metod hech narsa qaytarmaydi
+C) Metod faqat String qaytaradi
+D) Metod faqat boolean qaytaradi
+ANS: B
+---
+Q: Quyidagi metod chaqirilganda natija nima?   `static int add(int a, int b){ return a+b; }`  `System.out.println(add(2,3));`
+A) 23
+B) 6
+C) 5
+D) Error
+ANS: C
+---
+Q: Method parameter nima?
+A) Metod nomi
+B) Metod ichidagi local variable
+C) Metodga uzatiladigan qiymat uchun o‘zgaruvchi
+D) Class nomi
+ANS: C
+---
+Q: Quyidagi kodda `x` qayerda ishlatilishi mumkin?  if(true){ int x=5; }
+A) Hammasida ishlatish mumkin
+B) Faqat `if` blokining ichida
+C) Faqat main metoddan tashqarida
+D) Hech qayerda ishlatib bo‘lmaydi
+ANS: B
+---
+Q: Class (sinf) nima?
+A) Obyektning nusxasi
+B) Obyekt yaratish uchun shablon (template)
+C) Faqat metodlar ro‘yxati
+D) Faqat o‘zgaruvchi turi
+ANS: B
+---
+Q: Obyekt qanday yaratiladi?
+A) `create Person()`
+B) `Person p = new Person();`
+C) `Person = Person();`
+D) `new = Person();`
+ANS: B
+---
+Q: Constructor haqida to‘g‘ri fikr qaysi?
+A) Return type bo‘ladi (int, String)
+B) Class nomi bilan bir xil bo‘ladi va obyekt yaratilganda chaqiriladi
+C) Faqat static bo‘ladi
+D) Faqat interface ichida bo‘ladi
+ANS: B
+---
+Q: Agar class ichida constructor yozilmasa, Java nima qiladi?
+A) Dastur ishlamaydi
+B) Avtomatik default constructor yaratadi
+C) Faqat private constructor yaratadi
+D) Hech narsa qilmaydi
+ANS: B
+---
+Q: `this` kalit so‘zi nimani bildiradi?
+A) Parent class obyektini
+B) Joriy (current) obyektni
+C) Paket nomini
+D) Yangi obyektni
+ANS: B
+---
+Q: Javada `class` nima?
+A) Tayyor obyekt
+B) Obyekt yaratish uchun shablon (template)
+C) Faqat metodlar to‘plami
+D) Faqat o‘zgaruvchilar to‘plami
+ANS: B
+---
+Q: `object` (obyekt) nima?
+A) Classning nusxasi (instance)
+B) Faqat constructor
+C) Faqat static metod
+D) Paket nomi
+ANS: A
+---
+Q: Obyekt yaratishning to‘g‘ri ko‘rinishi qaysi?
+A) `Car c = Car();`
+B) `new Car c();`
+C) `Car c = new Car();`
+D) `Car = new c();`
+ANS: C
+---
+Q: Local variable (metod ichidagi o‘zgaruvchi) ishlatilishidan oldin nima bo‘lishi kerak?
+A) `final` bo‘lishi kerak
+B) `static` bo‘lishi kerak
+C) Albatta qiymat berilishi kerak
+D) `public` bo‘lishi kerak
+ANS: C
+---
+Q: Constructor haqida to‘g‘ri fikr qaysi?
+A) Constructor return typega ega bo‘ladi
+B) Constructor class nomi bilan bir xil bo‘ladi
+C) Constructor faqat `static` bo‘ladi
+D) Constructorni chaqirib bo‘lmaydi
+ANS: B
+---
+Q: Constructorning return type yozilsa (void yoki int) nima bo‘ladi?
+A) Baribir constructor hisoblanadi
+B) U oddiy metod bo‘lib qoladi
+C) Java avtomatik tuzatadi
+D) Dastur ishlamaydi (runtime error)
+ANS: B
+---
+Q: Agar class ichida hech qanday constructor yozilmasa, Java nima qiladi?
+A) Xato beradi
+B) `private` constructor yaratadi
+C) Default constructor yaratadi
+D) `final` constructor yaratadi
+ANS: C
+---
+Q: `this` kalit so‘zi nimani bildiradi?
+A) Parent class obyektini
+B) Joriy (current) obyektni
+C) Class nomini
+D) Paketni
+ANS: B
+---
+Q: Quyidagi holatda `this.name = name;` yozilishining asosiy sababi nima?
+A) `name` ni static qilish uchun
+B) Field va parametr nomlari bir xil bo‘lgani uchun ularni farqlash
+C) `name` ni final qilish uchun
+D) Constructorni tezlashtirish uchun
+ANS: B
+---
+Q: `this()` constructor ichida nima uchun ishlatiladi?
+A) Parent constructorni chaqirish uchun
+B) Shu classdagi boshqa constructorni chaqirish uchun
+C) Static metodni chaqirish uchun
+D) Obyektni o‘chirish uchun
+ANS: B
+---
+Q: `this()` chaqiruvi constructor ichida qayerda yozilishi kerak?
+A) Oxirida
+B) Istalgan joyda
+C) Birinchi qatorda
+D) Faqat `if` ichida
+ANS: C
+---
+Q: `this` kalit so‘zini `static` metod ichida ishlatish mumkinmi?
+A) Ha, doim
+B) Ha, faqat `public` bo‘lsa
+C) Yo‘q, chunki `static` metod current objectga bog‘liq emas
+D) Ha, faqat constructorda
+ANS: C
+---
+Q: `static` attribute nimani bildiradi?
+A) Har bir obyektga alohida nusxa yaratiladi
+B) Faqat constructor ichida ishlaydi
+C) Classga tegishli umumiy (shared) qiymat
+D) Faqat `private` bilan ishlaydi
+ANS: C
+---
+Q: `non-static` (instance) attribute nimani bildiradi?
+A) Classga tegishli bitta umumiy qiymat
+B) Har bir obyekt uchun alohida qiymat
+C) Faqat `main` metodda ishlaydi
+D) Faqat `final` bo‘ladi
+ANS: B
+---
+Q: `static` metodni chaqirishning to‘g‘ri usuli qaysi?
+A) Faqat obyekt orqali
+B) Class nomi orqali (`ClassName.methodName()`)
+C) Faqat constructor ichida
+D) `this.methodName()` orqali
+ANS: B
+---
+Q: `public` access modifier nimani anglatadi?
+A) Faqat shu class ichida ko‘rinadi
+B) Faqat shu package ichida ko‘rinadi
+C) Hamma joydan murojaat qilish mumkin
+D) Faqat subclasslardan ko‘rinadi
+ANS: C
+---
+Q: `private` access modifier nimani anglatadi?
+A) Hamma classlardan ochiq
+B) Faqat shu class ichida foydalaniladi
+C) Faqat package ichida
+D) Faqat `main` metodda
+ANS: B
+---
+Q: Javada access modifier yozilmasa (masalan, `int x;`) u qanday access bo‘ladi?
+A) `public`
+B) `private`
+C) `protected`
+D) package-private (default)
+ANS: D
+---
+Q: `protected` member uchun to‘g‘ri ta’rif qaysi?
+A) Faqat shu class ichida
+B) Faqat boshqa package ichida
+C) Shu package ichida va subclasslarda ishlatilishi mumkin
+D) Hamma joydan ochiq
+ANS: C
+---
+Q: Quyidagilardan qaysi biri encapsulation’ga mos yondashuv?
+A) Barcha fieldlarni `public` qilish
+B) Fieldlarni `private` qilib, getter/setter berish
+C) Faqat static field ishlatish
+D) Constructorni o‘chirish
+ANS: B
+---
+Q: `final` class nimani bildiradi?
+A) Obyekti yaratilmaydi
+B) Undan meros olib bo‘lmaydi
+C) Ichida metod bo‘lmaydi
+D) Faqat `private` bo‘ladi
+ANS: B
+---
+Q: `final` method nimani bildiradi?
+A) Metodni overload qilib bo‘lmaydi
+B) Metodni override qilib bo‘lmaydi
+C) Metod private bo‘ladi
+D) Metod static bo‘ladi
+ANS: B
+---
+Q: `final` variable haqida to‘g‘ri fikr qaysi?
+A) Qiymatini bir necha marta o‘zgartirish mumkin
+B) Faqat `null` bo‘ladi
+C) Bir marta qiymat berilgach, qayta o‘zgartirib bo‘lmaydi
+D) Faqat constructor ichida ishlaydi
+ANS: C
+---
+Q: Quyidagi kod natijasi nima? class Car { String color = "Red"; } Car c1 = new Car(); Car c2 = new Car(); c1.color = "Blue"; System.out.println(c2.color);
+A) Blue
+B) Red
+C) null
+D) Error
+ANS: B
+---
+Q: Quyidagi kod natijasi nima?   `class Counter { static int count = 0; Counter(){ count++; } }`  `new Counter(); new Counter(); System.out.println(Counter.count);`
+A) 0
+B) 1
+C) 2
+D) Error
+ANS: C
+---
+
